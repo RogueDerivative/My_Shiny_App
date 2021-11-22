@@ -3,7 +3,7 @@ Peer Review Project for JH Data Science Specialization thru Coursera
 
 My_Shiny_App uses the mtcars dataset in R and the caret / parsnip package to display a predicted value for the Miles Per Gallon.
 
-The prediction does have default values - all of which can be adjusted. After changes are made the user tabs the SUBMIT button and a new value is produced.
+The prediction does have default values - all of which can be adjusted. After changes are made the user can hit the SUBMIT button and a new value is produced.
 It is important to note that not all predictors are significant at all values. Therefore some adjustments to the input values may not change the predicted MPG value.
 
 # Radio Buttons
