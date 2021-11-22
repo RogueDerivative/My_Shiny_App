@@ -1,0 +1,42 @@
+---
+title: "My_Shiny_App"
+author: "Nate Foulkes"
+date: "11/21/2021"
+output: ioslides_presentation
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+## My_Shiny_App
+
+The purpose of this app is to allow a user to change some predictor values and see how their choices affect the Miles Per Gallon of a car.  
+The prediction model takes advantage of the caret and parsnip packages in R. The model uses a Random Forest as a predictor algorithm.
+
+## Why Have a Prediction App?   
+MPG is important!  
+
+- Gas Price Inflation 
+- Owner Cost
+- Environmental Impact
+- Informed Purchasing Decisions
+- Another Reason
+- Yet Another Reason
+
+## What Does the Dataset Look Like?   
+Displayed is the first five rows of the mtcars dataset:
+
+```{r cars, comment=""}
+head(mtcars)
+```
+
+## Plot of MPG v. Displacement
+
+```{r plot, warning=FALSE}
+with(mtcars,plot(disp,mpg))
+title(main = "MPG v. Displacement")
+with(subset(mtcars, am == 1), points(disp,mpg, col= "blue"))
+with(subset(mtcars, am == 0), points(disp,mpg, col= "red"))
+legend("topright",pch=1,col=c("blue","red"), legend = c("Manual","Automatic"))
+```
+
